@@ -11,7 +11,7 @@ export default function App() {
   return (
     <>
       {/* <Intro /> */}
-      {/* <EmailSubscribe /> */}
+      <EmailSubscribe />
       {/* <ProductModal /> */}
       <Me onSave={onSaveHandler} />
     </>
