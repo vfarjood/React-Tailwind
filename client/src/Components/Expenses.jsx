@@ -1,15 +1,16 @@
 import React from 'react'
+import ExpenseItem from './ExpenseItem'
 
-const Expenses = props => {
+const Expenses = ({ expenses }) => {
   return (
-    <div className=' bg-amber-600 h-60 flex-col'>
-      {props.items.map(item => {
-        ;<ul className='flex'>
-          <li> {item.title} </li>
-          <li> {item.price} </li>
-          <li> {item.date} </li>
-        </ul>
-      })}
+    <div className=' bg-amber-600 p-4 '>
+      {expenses.map(expense => (
+        <ExpenseItem
+          title={expense.title}
+          price={expense.price}
+          date={expense.date}
+        />
+      ))}
     </div>
   )
 }

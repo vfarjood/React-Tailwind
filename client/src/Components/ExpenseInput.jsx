@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-const Me = props => {
+const Me = ({ onSaveExpenseDate }) => {
   const [input, setinput] = useState({
     name: '',
     date: '',
@@ -19,8 +19,9 @@ const Me = props => {
   }
 
   const submitHandler = e => {
+    console.log('test')
     e.preventDefault()
-    props.onSave(input)
+    onSaveExpenseDate(input)
     setinput({ name: '', price: '', date: '' })
   }
 
@@ -37,7 +38,7 @@ const Me = props => {
             onChange={e => inputHandler('name', e.target.value)}
             className=' border rounded m-3'
             type='text'
-            name='name'
+            id='name'
           />
         </div>
         <div>
@@ -47,7 +48,7 @@ const Me = props => {
             onChange={e => inputHandler('date', e.target.value)}
             className=' border m-3 rounded'
             type='date'
-            name='date'
+            id='date'
           />
         </div>
         <div>
@@ -57,7 +58,7 @@ const Me = props => {
             onChange={e => inputHandler('price', e.target.value)}
             className=' border m-3 rounded'
             type='number'
-            name='Price'
+            id='Price'
           />
         </div>
         <button
