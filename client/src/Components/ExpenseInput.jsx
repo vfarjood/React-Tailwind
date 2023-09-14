@@ -3,16 +3,16 @@ import { useState } from 'react'
 
 const Me = props => {
   const [input, setinput] = useState({
-    product: '',
-    password: '',
+    name: '',
+    date: '',
     price: '',
   })
 
   const inputHandler = (inputType, value) => {
-    if (inputType === 'product') {
-      setinput(prevState => ({ ...prevState, product: value }))
-    } else if (inputType === 'password') {
-      setinput(prevState => ({ ...prevState, password: value }))
+    if (inputType === 'name') {
+      setinput(prevState => ({ ...prevState, name: value }))
+    } else if (inputType === 'date') {
+      setinput(prevState => ({ ...prevState, date: value }))
     } else {
       setinput(prevState => ({ ...prevState, price: value }))
     }
@@ -21,33 +21,33 @@ const Me = props => {
   const submitHandler = e => {
     e.preventDefault()
     props.onSave(input)
-    setinput({ product: '', price: '', password: '' })
+    setinput({ name: '', price: '', date: '' })
   }
 
   return (
-    <div className=' '>
+    <div className=' flex bg-slate-700'>
       <form
         onSubmit={submitHandler}
-        className=' p-4 bg-slate-700 '
+        className=' p-4  '
       >
         <div>
-          <label htmlFor='Product'> Product </label>
+          <label htmlFor='name'> name </label>
           <input
-            value={input.product}
-            onChange={e => inputHandler('product', e.target.value)}
-            className=' w-1/3 border rounded m-3'
+            value={input.name}
+            onChange={e => inputHandler('name', e.target.value)}
+            className=' border rounded m-3'
             type='text'
-            name='Product'
+            name='name'
           />
         </div>
         <div>
-          <label htmlFor='password'>Password</label>
+          <label htmlFor='date'>date</label>
           <input
-            value={input.password}
-            onChange={e => inputHandler('password', e.target.value)}
-            className='w-1/3 border m-3 rounded'
-            type='password'
-            name='password'
+            value={input.date}
+            onChange={e => inputHandler('date', e.target.value)}
+            className=' border m-3 rounded'
+            type='date'
+            name='date'
           />
         </div>
         <div>
@@ -55,7 +55,7 @@ const Me = props => {
           <input
             value={input.price}
             onChange={e => inputHandler('price', e.target.value)}
-            className='w-1/3 border m-3 rounded'
+            className=' border m-3 rounded'
             type='number'
             name='Price'
           />
@@ -67,11 +67,10 @@ const Me = props => {
           Submit
         </button>
       </form>
-
       <section className='p-4'>
-        <h3>{input.product}</h3>
+        <h3>{input.name}</h3>
         <h3>{input.price}</h3>
-        <h3>{input.password} </h3>
+        <h3>{input.date} </h3>
       </section>
     </div>
   )
