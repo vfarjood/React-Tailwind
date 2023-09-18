@@ -4,16 +4,20 @@ const Expenses = ({ expenses, selectedYear }) => {
   const filteredExpenses =  expenses.filter( expense => {
       return expense.date.getFullYear().toString() === selectedYear
   })
-const content = <p> test </p>
+let content = <p> No data found! </p>
+  if(filteredExpenses.length > 0){
+    content =  filteredExpenses.map(expense => (
+        <ExpenseItem
+            title={expense.title}
+            price={expense.price}
+            date={expense.date}
+        />
+    ))
+  }
+
   return (
     <div className=' bg-amber-600 p-4 '>
-      { filteredExpenses.lenght === 0 ? <h2> No data found </h2> : filteredExpenses.map(expense => (
-        <ExpenseItem
-          title={expense.title}
-          price={expense.price}
-          date={expense.date}
-        />
-      ))}
+      {content}
     </div>
   )
 }
