@@ -1,10 +1,13 @@
 import ExpenseItem from './ExpenseItem'
-
-// eslint-disable-next-line react/prop-types
 const Expenses = ({ expenses, selectedYear }) => {
+
+  const filteredExpenses =  expenses.filter( expense => {
+      return expense.date.getFullYear().toString() === selectedYear
+  })
+const content = <p> test </p>
   return (
     <div className=' bg-amber-600 p-4 '>
-      {expenses.map(expense => expense.date === selectedYear && (
+      { filteredExpenses.lenght === 0 ? <h2> No data found </h2> : filteredExpenses.map(expense => (
         <ExpenseItem
           title={expense.title}
           price={expense.price}
