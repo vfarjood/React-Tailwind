@@ -33,7 +33,7 @@ export default function App() {
       {/* <ProductModal /> */}
       <ExpensesFilter initialYear={currentYear} onDateFilter={onDateFilterHandler} />
       <ExpenseInput onSaveExpenseDate={SaveExpenseDateHandler} />
-      <Expenses expenses={expenses} selectedYear={selectedYear} />
+      {/*<Expenses expenses={expenses} selectedYear={selectedYear} />*/}
     </>
   )
 }
