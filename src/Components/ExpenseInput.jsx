@@ -20,6 +20,7 @@ const ExpenseInput = ({ onSaveExpenseDate }) => {
   }
 
   const submitHandler = e => {
+
     e.preventDefault()
     onSaveExpenseDate(input)
     setInput({ title: '', price: '', date: '' })
