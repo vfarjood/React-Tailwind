@@ -1,6 +1,6 @@
-import MenuButton from '../Components/MenuButton'
+import MenuButton from '../UI/MenuButton.jsx'
 import GlowImg from '../Components/GlowImg'
-import Button from '../Components/Button1'
+import Button from '../UI/Button1.jsx'
 
 const Intro = () => {
   return (

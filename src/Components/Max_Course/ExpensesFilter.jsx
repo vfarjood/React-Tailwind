@@ -1,4 +1,4 @@
-import '../Components/ExpenseFilter.css'
+import './ExpenseFilter.css'
 
 const ExpensesFilter = ({onDateFilter}) => {
 

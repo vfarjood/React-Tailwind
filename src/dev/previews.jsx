@@ -1,7 +1,7 @@
 import React from 'react'
 import {ComponentPreview, Previews} from '@react-buddy/ide-toolbox'
 import {PaletteTree} from './palette.jsx'
-import ExpenseInput from "../Components/ExpenseInput.jsx";
+import ExpenseInput from "../Components/Max_Course/ExpenseInput.jsx";
 
 const ComponentPreviews = () => {
     return (

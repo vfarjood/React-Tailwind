@@ -1,4 +1,4 @@
-import ExpenseItem from './ExpenseItem'
+import ExpenseItem from './ExpenseItem.jsx'
 const Expenses = ({ expenses, selectedYear }) => {
   const filteredExpenses = expenses.filter(expense => {
     return expense.date.getFullYear().toString() === selectedYear

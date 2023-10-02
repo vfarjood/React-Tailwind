@@ -1,9 +1,9 @@
 import EmailSubscribe from './Pages/EmailSubscribe'
 import Intro from './Pages/Intro'
 import ProductModal from './Pages/ProductModal'
-import ExpenseInput from './Components/ExpenseInput'
-import ExpensesFilter from './Components/ExpensesFilter'
-import Expenses from './Components/Expenses'
+import ExpenseInput from './Components/Max_Course/ExpenseInput.jsx'
+import ExpensesFilter from './Components/Max_Course/ExpensesFilter.jsx'
+import Expenses from './Components/Max_Course/Expenses.jsx'
 import { useState } from 'react'
 
 const DUMMY_EXPENSES = [
