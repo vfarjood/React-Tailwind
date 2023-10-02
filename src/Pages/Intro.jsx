@@ -1,5 +1,5 @@
 import MenuButton from '../UI/MenuButton.jsx'
-import GlowImg from '../Components/GlowImg'
+import GlowImg from '../UI/GlowImg.jsx'
 import Button from '../UI/Button1.jsx'
 
 const Intro = () => {
