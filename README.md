@@ -1,8 +1,11 @@
-# React + Vite
+# React + Tailwind
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This template project show cases my current understanding of React and Tailwind.
 
-Currently, two official plugins are available:
+There are 3 pages:
+1. My personal profile page
+2. A newsletter email subscription modal
+3. A sale product modal
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I'll add more pages to the project as my knowledge grows.
+
