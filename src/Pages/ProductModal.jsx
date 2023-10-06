@@ -25,11 +25,11 @@ const ProductModal = () => {
               </p>
             </div>
 
-            <h1 className='md:text-left text-xl text-center'>
+            <h1 className='md:text-left text-gray-700 text-xl text-center'>
               Razer Kraken Kitty Edt Gaming <br /> Headset Quartz
             </h1>
-            <p className='md:text-left line-through text-center'>$799</p>
-            <p className='md:text-left font-bold text-5xl text-center '>$599</p>
+            <p className='md:text-left text-gray-400 line-through text-center'>$799</p>
+            <p className='md:text-left text-gray-700 font-bold text-5xl text-center '>$599</p>
             <p className='md:text-left text-gray-400 text-sm text-center'>
               This offer is valid until April 3rd or as long as stock lasts!
             </p>
@@ -41,29 +41,29 @@ const ProductModal = () => {
             {/* Stocks */}
             <div className=' flex items-center group'>
               <div className=' bg-green-400 w-3 h-3 rounded-full group-hover:animate-ping '></div>
-              <p className='text-sm pl-2'>50+ pcs. in stock</p>
+              <p className='text-sm pl-2 text-gray-700' >50+ pcs. in stock</p>
             </div>
             {/* Bottom Button Container */}
             <div className='flex flex-col md:flex-row gap-4'>
-              <button className='border-2 border-gray-300 rounded-lg p-3 shadow-sm hover:shadow-lg hover:-translate-y-1'>
+              <button className='border-2 border-gray-300 rounded-lg p-3 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all '>
                 <div className='flex items-center justify-center gap-4'>
                   <img
                     className='w-9'
                     src={weight}
                     alt=''
                   />
-                  <p>Add to cart</p>
+                  <p className='text-gray-700' >Add to cart</p>
                 </div>
               </button>
 
-              <button className='   border-2 border-gray-300 rounded-lg p-3 shadow-sm hover:shadow-lg hover:-translate-y-1'>
+              <button className=' transition-all  border-2 border-gray-300 rounded-lg p-3 shadow-sm hover:shadow-lg hover:-translate-y-1'>
                 <div className='flex items-center justify-center gap-4'>
                   <img
                     className='w-9 '
                     src={heart}
                     alt=''
                   />
-                  <p>Add to wishlist</p>
+                  <p className='text-gray-700'>Add to wishlist</p>
                 </div>
               </button>
             </div>
